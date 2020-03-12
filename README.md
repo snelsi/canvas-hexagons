@@ -1,3 +1,5 @@
+## Original idea from [thibaut.io post](https://thibaut.io/react-canvas-components)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
