@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 import { CanvasContext, FrameContext } from "Canvas";
 
 export const useCanvas = () => {

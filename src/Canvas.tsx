@@ -9,8 +9,16 @@ interface CanvasProps {
   width: number;
   dpr: number;
   isAnimating: boolean;
+  onClick: () => void;
 }
-export const Canvas: React.FC<CanvasProps> = ({ height, width, dpr, isAnimating, children }) => {
+export const Canvas: React.FC<CanvasProps> = ({
+  height,
+  width,
+  dpr,
+  isAnimating,
+  onClick,
+  children,
+}) => {
   const canvasRef = React.useRef<HTMLCanvasElement>(null);
   const actualWidth = width * dpr;
   const actualHeight = height * dpr;
@@ -61,6 +69,7 @@ export const Canvas: React.FC<CanvasProps> = ({ height, width, dpr, isAnimating,
           height={actualHeight}
           width={actualWidth}
           style={{ width, height }}
+          onClick={onClick}
         />
         {children}
       </FrameContext.Provider>

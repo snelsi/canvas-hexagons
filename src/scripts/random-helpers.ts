@@ -28,7 +28,7 @@ interface getRandomHexagonProps {
   x: number | number[];
   y: number | number[];
 }
-interface Hexagon {
+export interface IHexagon {
   initialRotation: number;
   rotationSpeed: number;
   x: number;
@@ -36,7 +36,7 @@ interface Hexagon {
   size: number;
   color: string;
 }
-export const getRandomHexagon = ({ baseSize, baseHue, x, y }: getRandomHexagonProps): Hexagon => {
+export const getRandomHexagon = ({ baseSize, baseHue, x, y }: getRandomHexagonProps): IHexagon => {
   const size = randomInt(baseSize * 1.2, baseSize * 2);
   const positionVariance = Math.round(0.1 * baseSize);
 
@@ -64,7 +64,7 @@ export const getHexagonsToFillZone = ({ width, height }: getHexagonsToFillZonePr
 
   /* putting big hexagons in the screen corners */
   /* so that we have the whole screen covered */
-  const cornerHexagons: Hexagon[] = [];
+  const cornerHexagons: IHexagon[] = [];
   for (let i = 0; i <= Math.round(width / smallerSize); i++) {
     for (let j = 0; j <= Math.round(height / smallerSize); j++) {
       cornerHexagons.push(

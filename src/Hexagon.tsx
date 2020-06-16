@@ -1,3 +1,4 @@
+import * as React from "react";
 import { useCanvas, useAnimation } from "scripts";
 
 interface HexagonProps {
@@ -18,7 +19,7 @@ export const Hexagon: React.FC<HexagonProps> = ({
 }) => {
   const context = useCanvas();
 
-  const animatedAngle = useAnimation(initialRotation, angleValue => angleValue + rotationSpeed);
+  const animatedAngle = useAnimation(initialRotation, (angleValue) => angleValue + rotationSpeed);
 
   if (context !== undefined) {
     const edgeLength = size * 0.5;
