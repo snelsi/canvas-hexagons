@@ -3,6 +3,9 @@ import useDimensions from "react-use-dimensions";
 import { getHexagonsToFillZone } from "scripts";
 import { Canvas } from "Canvas";
 import { Hexagon } from "Hexagon";
+
+import { GitHubLink } from "GitHubLink";
+
 import "./styles.css";
 
 const App = () => {
@@ -24,6 +27,7 @@ const App = () => {
           ))}
         </Canvas>
       )}
+      <GitHubLink />
     </main>
   );
 };
